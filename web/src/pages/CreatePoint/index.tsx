@@ -12,7 +12,7 @@ import logo from '../../assets/logo.svg'
 
 interface Item {
   id: number,
-  name: string,
+  title: string,
   image_url: string
 }
 
@@ -252,8 +252,8 @@ const CreatePoint: React.FC = () => {
                 key={item.id}
                 className={selectedItems.includes(item.id) ? 'selected' : ''}
                 onClick={() => handleSelectItem(item.id)}>
-                <img src={item.image_url} alt={item.name} />
-                <span>{item.name}</span>
+                <img src={item.image_url} alt={item.title} />
+                <span>{item.title}</span>
               </li>
             ))}
 
